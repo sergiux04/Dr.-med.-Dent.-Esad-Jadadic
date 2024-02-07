@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<title>Home Page</title>
+	</style>
+</head>
+<body>
+        
+	<!-- <video autoplay muted loop>
+		<source src="footag/production_id_4488805 (2160p) (1).mp4" type="video/mp4">
+	</video> -->
+
+
+    <img class="wallpaper" src="footag/Esad Jadadic.jpg" />
+
+    <div>
+
+        <div class="container">
+            
+            <div class="left"></div>
+            <div class="right"> 
+                <h1>Dr. med. Dent. Esad Jadadic</h1>
+                <h2>Dentist</h2>
+                <p>Dr. Esad Jadadic has over 10 years of experience in dentistry. He is committed to providing personalized care to his clients, and keeping his practice up-to-date with the latest research and technology in the field.</p>
+                <button>Book a Consult</button>
+            </div>
+        </div>
+        
+</div>
+
+<script>document.addEventListener('DOMContentLoaded', function () {
+    const servicesH1 = document.querySelector('.right h2');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                startTypingAnimation();
+                observer.unobserve(servicesH1);
+            }
+        });
+    }, { threshold: 0.8 });
+
+    observer.observe(servicesH1);
+
+    function startTypingAnimation() {
+        const textToType = servicesH1.textContent.trim();
+        servicesH1.textContent = '';
+        typeCharacters(textToType, 0);
+    }
+
+    function typeCharacters(text, index) {
+        if (index < text.length) {
+            servicesH1.textContent += text.charAt(index);
+            index++;
+            setTimeout(() => typeCharacters(text, index), 100); // Adjust typing speed (milliseconds)
+        }
+    }
+});
+
+</script>
+
+
+</div>
+
+<div class="container-about">
+    <div class="image-container">
+        <img src="/footag/waiting room.jpg" alt="Dentist Photo">
+    </div>
+    <div class="text-container">
+        <h1 style="    font-size: 50px;
+        font-weight: 600;
+        background-image: linear-gradient(to left, #1a0a46, #431f66);
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;">Your dental practice at the Westside in Bern</h1>
+        <p>Welcome to our dental practice. Dr. Esad Jadadic is a highly skilled and experienced dentist dedicated to providing the best care for our patients. With a focus on personalized treatments, we strive to make your dental experience comfortable and effective.</p>
+        <div class="testimonials-container">
+            <div class="testimonial active" id="testimonial1">
+                <p>"We regularly come to the dental practice at Westside for check-ups and treatments."</p>
+                <p>- John Doe</p>
+            </div>
+            <div class="testimonial" id="testimonial2">
+                <p>"The friendliness and responsiveness to the customers convinced us."</p>
+                <p>- Jane Smith</p>
+            </div>
+            <div class="testimonial" id="testimonial3">
+                <p>"Mr. Jadadic is very responsive to our children aged 7, 10, 12."</p>
+                <p>- Gallus</p>
+            </div>
+            <div class="testimonial" id="testimonial3">
+                <p>"We can only recommend the practice!"</p>
+                <p>- Ruth Tannheimer</p>
+            </div>
+            <!-- Add more testimonials as needed -->
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const textContainer = document.querySelector('.text-container');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    textContainer.classList.add('animate');
+                }
+            });
+        }, { threshold: 0.5 });
+
+        observer.observe(textContainer);
+    });
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const imageContainer = document.querySelector('.image-container');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    imageContainer.classList.add('animate');
+                }
+            });
+        }, { threshold: 0.5 });
+
+        observer.observe(imageContainer);
+    });
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const testimonials = document.querySelectorAll('.testimonial');
+        let index = 0;
+
+        setInterval(() => {
+            testimonials[index].classList.remove('active');
+            index = (index + 1) % testimonials.length;
+            testimonials[index].classList.add('active');
+        }, 4000);
+    });
+</script>
+
+
+
+<div class="container-about2">
+    <h1 class="typing-text">Why Choose Dr. Esad Jadadic</h1>
+
+    <div class="statements-container">
+        <div class="statement">
+            <h2>Expertise</h2>
+            <p>Share what makes your business unique to set you apart from your competition.</p>
+        </div>
+
+        <div class="statement">
+            <h2>Philosophy</h2>
+            <p>Share what makes your business unique to set you apart from your competition.</p>
+        </div>
+
+        <div class="statement">
+            <h2>Technology</h2>
+            <p>Share what makes your business unique to set you apart from your competition.</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+    const typingText = document.querySelector('.typing-text');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                startTypingAnimation();
+                observer.unobserve(typingText);
+            }
+        });
+    }, { threshold: 0.8 });
+
+    observer.observe(typingText);
+
+    function startTypingAnimation() {
+        const textToType = typingText.textContent.trim();
+        typingText.textContent = '';
+        typeCharacters(textToType, 0);
+    }
+
+    function typeCharacters(text, index) {
+        if (index < text.length) {
+            typingText.textContent += text.charAt(index);
+            index++;
+            setTimeout(() => typeCharacters(text, index), 70); // Adjust typing speed (milliseconds)
+        }
+    }
+});
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const imageContainer = document.querySelector('.image-container');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    imageContainer.classList.add('animate');
+                }
+            });
+        }, { threshold: 0.8 });
+
+        observer.observe(imageContainer);
+    });
+</script>
+
+<video class="video2" autoplay muted loop>
+    <source src="/footag/pattern_-_85590 (Original).mp4" type="video/mp4">
+</video>
+
+<div class="container-services2">
+    <h1 class="typing-text">Services</h1>
+
+    <div class="services-container">
+        <div class="services">
+            <h2>General and Surgical Dentistry:</h2>
+            <ul>
+                <li>Comprehensive dental examinations and check-ups</li>
+                <li>Tooth extractions and oral surgeries</li>
+                <li>Root canal therapy and endodontic treatments</li>
+                <li>Gum disease treatment and periodontal care</li>
+                <li>Dental implants and implant-supported restorations</li>
+            </ul>
+        </div>
+
+        <div class="services">
+            <h2>Cosmetic Dentistry:</h2>
+            <ul>
+                <li>Teeth whitening for a brighter, more radiant smile</li>
+                <li>Porcelain veneers to enhance the appearance of teeth</li>
+                <li>Dental bonding for minor tooth repairs and reshaping</li>
+                <li>Smile makeovers to address multiple aesthetic concerns</li>
+                <li>Invisalign® clear aligners for discreet orthodontic treatment</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>document.addEventListener('DOMContentLoaded', function () {
+    const servicesH1 = document.querySelector('.container-services2 h1.typing-text');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                startTypingAnimation();
+                observer.unobserve(servicesH1);
+            }
+        });
+    }, { threshold: 0.8 });
+
+    observer.observe(servicesH1);
+
+    function startTypingAnimation() {
+        const textToType = servicesH1.textContent.trim();
+        servicesH1.textContent = '';
+        typeCharacters(textToType, 0);
+    }
+
+    function typeCharacters(text, index) {
+        if (index < text.length) {
+            servicesH1.textContent += text.charAt(index);
+            index++;
+            setTimeout(() => typeCharacters(text, index), 70); // Adjust typing speed (milliseconds)
+        }
+    }
+});</script>
+
+<script>
+    // Intersection Observer to trigger the fade-in animation
+    const serviceElements = document.querySelectorAll('.services');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.animationPlayState = 'running';
+          observer.unobserve(entry.target);
+        }
+      });
+    });
+
+    serviceElements.forEach(element => {
+      observer.observe(element);
+    });
+  </script>
+
+
+<div class="container-map">
+    <h1>Find Us</h1>
+    <iframe
+    id="map"
+    width="600"
+    height="450"
+    frameborder="0"
+    scrolling="no"
+    marginheight="0"
+    marginwidth="0"
+    src="https://www.openstreetmap.org/export/embed.html?bbox=7.3755562%2C46.9448722%2C7.3755563%2C46.9448723&amp;layer=mapnik&amp;marker=46.9448722%2C7.3755562"
+></iframe>
+    <p>Visit our clinic at:</p>
+    <address>
+        Ramuzstrasse 15, 3027 Bern<br>
+        Switzerland<br>
+        3027
+    </address>
+</div>
+
+<script>document.addEventListener('DOMContentLoaded', function () {
+    const servicesH1 = document.querySelector('.container-map h1');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                startTypingAnimation();
+                observer.unobserve(servicesH1);
+            }
+        });
+    }, { threshold: 0.8 });
+
+    observer.observe(servicesH1);
+
+    function startTypingAnimation() {
+        const textToType = servicesH1.textContent.trim();
+        servicesH1.textContent = '';
+        typeCharacters(textToType, 0);
+    }
+
+    function typeCharacters(text, index) {
+        if (index < text.length) {
+            servicesH1.textContent += text.charAt(index);
+            index++;
+            setTimeout(() => typeCharacters(text, index), 70); // Adjust typing speed (milliseconds)
+        }
+    }
+});</script>
+
+<div class="container-details3">
+    <div class="contact-details3">
+        <img class="profile-photo3" src="/footag/contact us2.jpg" alt="Profile Photo">
+
+        <h13 style="    font-size: 50px;
+        font-weight: 600;
+        background-image: linear-gradient(to left, #1a0a46, #431f66);
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;" >Contact Us</h13>
+        <p3>Feel free to reach out with any inquiries or just to say hello!</p3>
+
+        <div class="social-links3">
+            <a3 href="https://twitter.com/your_twitter" target="_blank"><i3 class="fab fa-twitter"></i3></a3>
+            <a3 href="https://facebook.com/your_facebook" target="_blank"><i3 class="fab fa-facebook"></i3> </a3>
+            <a3 href="https://instagram.com/your_instagram" target="_blank"><i3 class="fab fa-instagram"></i3> </a3>
+        </div>
+
+        <div class="contact-info3">
+            <p3>Email: eaj2dr@bluewin.ch</p3>
+            <p3>or</p3>
+            <p3>info@zahnarztpraxiswestside.ch</p3>
+            <p3>Phone: 031 991 77 89</p3>
+            <p3>Fax: 031 991 77 90</p3>
+        </div>
+    </div>
+</div>
+</body>
+</html>
